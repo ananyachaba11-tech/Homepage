@@ -24,62 +24,89 @@ nav a {
 }
 
 .hero {
+  min-height: 90vh;
   background-color: #efe7de;
-  padding: 56px 48px;
-  gap: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-  min-height: 70vh;
+  display: flex; /* makes this element into a box layout of elements to control alignment together */
+  flex-direction: row; /* decides main and cross axis for alignment decisions */
+  justify-content: space-evenly; /* aligns flex items along main axis in a way that spaces before and after (including margins is even) */
+  align-items: center; /* aligns flex items along cross axis*/
+  flex-wrap: wrap; /* wraps items according to screen size, so your photo won't get cut but instead align itself vertically */
+  gap: 32px; /* gap adds and guarantees space between flex items, even when layout tightens.*/
 }
 
 .hero-left {
-  max-width: 600px;
-  padding-left: 80px;
-  padding-bottom: 0px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.hero-image {
-  text-align: right;
-  padding-right: 80px;
+.hero-left-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 25px;
+  margin-top: 30px;
 }
 
 .hero-name {
   color: #c86428;
 }
 
-.hero-left h1 {
+.hero-left-heading {
+  margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   color: #3a2b22;
   font-size: 72px;
   font-weight: 400;
-  line-height: 1.05;
-  margin: 0 0 24px 0;
 }
 
-.hero-left p {
+.hero-left-para {
+  margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   color: #2f2a25;
   font-size: 30px;
-  line-height: 1.6;
-  max-width: 520px;
-  margin: 0 0 28px 0;
+  margin-top: 15px;
 }
 
-.hero-button {
-  display: inline-block;
+.hero-left-button {
   background-color: #c86428;
   color: #fffaf5;
+  width: 110px;
+  border: 1px solid transparent;
+  text-align: center;
   text-decoration: none;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
-  padding: 12px 22px;
   border-radius: 4px;
-  margin-right: 12px;
-  margin-top: 8px;
+  padding: 10px 15px;
 }
 
-.hero-button:hover {
-  background-color: #b85c24;
+.hero-left-button:hover {
+  background-color: #f6eee4;
+  border-color: #c86428;
+  color: #c86428;
+}
+
+.hero-image {
+  text-align: right;
+}
+
+.hero-image img {
+  border-radius: 50%;
+  border: 2px solid #e2d9cd;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+}
+
+#typed-name {
+  border-right: 2px solid #c86428;
+  padding-right: 2px;
+  animation: blink-cursor 0.8s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  50% {
+    border-color: transparent;
+  }
 }

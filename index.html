@@ -17,30 +17,37 @@
     </nav>
 
     <main>
-      <!--Hero section -->
       <section class="hero">
+        <!--Hero section -->
         <div class="hero-left">
-          <div class="hero-title">
-            <h1>
-              Hi! I'm
-              <span class="hero-name">Ananya.</span>
-            </h1>
-          </div>
+          <!--Assigning hero title + text + links one class on the left-->
+          <h1 class="hero-left-heading">
+            Hi! I'm <span class="hero-name" id="typed-name"></span>
+          </h1>
 
-          <p>
+          <p class="hero-left-para">
             I am a data analyst and aspiring data storyteller based in Delhi,
             India.
           </p>
 
-          <a
-            href="https://www.linkedin.com/in/ananya-chaba-b32948189/"
-            class="hero-button"
-            >LinkedIn</a
-          >
-          <a href="https://ananyachaba.substack.com" class="hero-button"
-            >Substack</a
-          >
+          <div class="hero-left-buttons">
+            <a
+              href="https://www.linkedin.com/in/ananya-chaba-b32948189/"
+              class="hero-left-button"
+              >LinkedIn</a
+            >
+            <a href="https://ananyachaba.substack.com" class="hero-left-button"
+              >Substack</a
+            >
+
+            <a
+              href="https://github.com/ananyachaba11-tech"
+              class="hero-left-button"
+              >GitHub</a
+            >
+          </div>
         </div>
+
         <div class="hero-image">
           <img
             src="images/ananya-photo.jpg"
@@ -52,4 +59,20 @@
       </section>
     </main>
   </body>
+
+  <script>
+    const typedName = document.getElementById("typed-name");
+    const text = "Ananya.";
+    let index = 0;
+
+    function typeLetter() {
+      if (index < text.length) {
+        typedName.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeLetter, 400); // typing speed in ms
+      }
+    }
+
+    window.addEventListener("load", typeLetter);
+  </script>
 </html>
