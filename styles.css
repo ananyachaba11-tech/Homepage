@@ -4,7 +4,9 @@ body {
 }
 
 nav {
-  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   padding: 24px 48px;
   font-size: 20px;
   border-bottom: 1px solid #d8d1c6;
