@@ -65,7 +65,7 @@ nav a {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   color: #2f2a25;
-  font-size: clamp(15px, 4vw, 30px);
+  font-size: clamp(20px, 4vw, 30px);
   margin-top: 15px;
 }
 
