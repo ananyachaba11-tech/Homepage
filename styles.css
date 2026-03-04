@@ -28,7 +28,7 @@ nav a {
 }
 
 .hero {
-  min-height: 60vh;
+  min-height: 50vh;
   background-color: #efe7de;
   display: flex; /* makes this element into a box layout of elements to control alignment together */
   flex-direction: row; /* decides main and cross axis for alignment decisions */
@@ -128,36 +128,44 @@ nav a {
 }
 
 #Aboutme {
+  min-height: 10vh;
   background-color: #f4f1eb;
-  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  border: 3px solid black;
 }
 
 #Aboutme h1 {
-  padding: 24px;
-  margin: 0;
-  border: 3px solid black;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  display: flex;
   font-family: Georgia, "Times New Roman", serif;
   color: #37291f;
   font-weight: 400;
   font-size: clamp(20px, 4vw, 30px);
+  align-items: center;
+  width: 100%; /* without this, h1's flex container will be as wide as the length of 'about me', leaving no space to add the lines around it. */
+  gap: 25px; /* adds space between wings and text */
 }
 
 #Aboutme h1::before,
 #Aboutme h1::after {
   content: "";
   flex: 1; /* make the lines grow to fill space */
-  height: 10px;
+  height: 1px;
   background-color: #5a483b; /* light line color */
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#aboutmetext {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .Aboutmepara {
   margin: 0;
-  border: 3px solid black;
   margin-left: 120px;
   margin-right: 120px;
   font-family:
