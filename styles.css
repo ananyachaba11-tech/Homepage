@@ -12,7 +12,7 @@ nav {
   font-size: 20px;
   border-bottom: 1px solid #d8d1c6;
   box-shadow: 0 1px 2px rgba(90, 70, 40, 0.04);
-  background-color: #e7e1da;
+  background-color: #efe7de;
   gap: 5px;
 }
 
@@ -28,7 +28,7 @@ nav a {
 }
 
 .hero {
-  min-height: 70vh;
+  min-height: 60vh;
   background-color: #efe7de;
   display: flex; /* makes this element into a box layout of elements to control alignment together */
   flex-direction: row; /* decides main and cross axis for alignment decisions */
@@ -125,4 +125,50 @@ nav a {
   .hero-image {
     text-align: right;
   }
+}
+
+#Aboutme {
+  background-color: #f4f1eb;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 3px solid black;
+}
+
+#Aboutme h1 {
+  padding: 24px;
+  margin: 0;
+  border: 3px solid black;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #37291f;
+  font-weight: 400;
+  font-size: clamp(20px, 4vw, 30px);
+}
+
+#Aboutme h1::before,
+#Aboutme h1::after {
+  content: "";
+  flex: 1; /* make the lines grow to fill space */
+  height: 10px;
+  background-color: #5a483b; /* light line color */
+}
+
+.Aboutmepara {
+  margin: 0;
+  border: 3px solid black;
+  margin-left: 120px;
+  margin-right: 120px;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #2f2a25;
+  font-size: clamp(5px, 3vw, 15px);
+  line-height: 30px;
 }
