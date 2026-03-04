@@ -58,14 +58,14 @@ nav a {
   font-family: Georgia, "Times New Roman", serif;
   color: #3a2b22;
   font-weight: 400;
-  font-size: clamp(30px, 4vw, 72px);
+  font-size: clamp(50px, 4vw, 72px);
 }
 
 .hero-left-para {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   color: #2f2a25;
-  font-size: clamp(20px, 4vw, 30px);
+  font-size: clamp(30px, 4vw, 50px);
   margin-top: 15px;
 }
 
