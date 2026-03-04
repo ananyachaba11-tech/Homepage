@@ -103,7 +103,7 @@ nav a {
 }
 
 .hero-image img {
-  width: clamp(200px, 35vw, 450px);
+  width: clamp(300px, 35vw, 450px);
   border-radius: 50%;
   border: 2px solid #e2d9cd;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
